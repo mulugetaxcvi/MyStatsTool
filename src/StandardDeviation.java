@@ -34,17 +34,16 @@ public class StandardDeviation {
 
     @Override
     public String toString() {
-        StringBuilder s = new StringBuilder();
-        s.append(String.format("Result = %.5f" +
+        String s = String.format("Result = %.5f" +
                         " +- %.5f" + "\nStandard Deviation = %.5f" +
                         "\nStandard Deviation of the Mean= %.5f" +
                         "\nVariance = %.5f" +
                         "\nMean = %.5f",
-                standardDeviation(),meanStandardDeviation(),
+                standardDeviation(), meanStandardDeviation(),
                 standardDeviation(),
                 meanStandardDeviation(),
                 variance(),
-                mean()));
-        return s.toString();
+                mean());
+        return s;
     }
 }

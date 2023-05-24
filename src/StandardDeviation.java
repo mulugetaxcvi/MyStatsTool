@@ -8,7 +8,7 @@ public class StandardDeviation {
         for (double i : myData) {
             sum += i;
         }
-        Double length = (double) myData.size();
+        double length = myData.size();
         mean = sum / length;
         double standardSum = 0.0;
         for (Double num : myData) {
@@ -34,7 +34,7 @@ public class StandardDeviation {
 
     @Override
     public String toString() {
-        String s = String.format("Result = %.5f" +
+        return String.format("Result = %.5f" +
                         " +- %.5f" + "\nStandard Deviation = %.5f" +
                         "\nStandard Deviation of the Mean= %.5f" +
                         "\nVariance = %.5f" +
@@ -44,6 +44,5 @@ public class StandardDeviation {
                 meanStandardDeviation(),
                 variance(),
                 mean());
-        return s;
     }
 }
